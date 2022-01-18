@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Home Authentication</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div id="page1">
+      <nav
+        class="navbar"
+        style="background-color: #2f2f2f; text-align: center; align-items: center; justify-content: center; margin-bottom: 100px"
+      >
+        <h4 style="color: white">HOME AUTHENTOCATION</h4>
+      </nav>
+      <div class="titleContainer">
+        <span class="alert alert-dark" style="color:black" id="message"
+          >Your Say!!!</span
+        >
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <!--Controler 1-->
+          <div
+            class="cardContainer align-items-center col-lg-6 col-md-12 col-sm-12"
+          >
+            <div id="bgControler1" class="cardSecContainer">
+              <div class="row">
+                <div
+                  class="imageContainer text-center col-lg-6 col-md-6 col-sm-12"
+                >
+                  <img id="img" class="center" src="" style="width: 150px" />
+                </div>
+                <div
+                  class="col-lg-6 col-md-6 col-sm-12"
+                  style="padding-top: 20px;"
+                >
+                  <div
+                    class="text-center"
+                    style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px"
+                  >
+                    <h2 style="vertical-align: middle; color: white">
+                      Bathroom
+                    </h2>
+                  </div>
+                  <div
+                    class=""
+                    style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px"
+                  >
+                    <input id="chkLED" type="checkbox" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Controler 2-->
+          <div
+            class="cardContainer align-items-center col-lg-6 col-md-12 col-sm-12"
+          >
+            <div id="bgControler2" class="cardSecContainer">
+              <div class="row">
+                <div
+                  class="imageContainer text-center col-lg-6 col-md-6 col-sm-12"
+                >
+                  <img
+                    id="controler2img"
+                    class="center"
+                    src=""
+                    style="width: 150px"
+                  />
+                </div>
+                <div
+                  class="col-lg-6 col-md-6 col-sm-12"
+                  style="padding-top: 20px;"
+                >
+                  <div
+                    class="text-center"
+                    style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px"
+                  >
+                    <h2 style="vertical-align: middle; color: white">
+                      Bedroom
+                    </h2>
+                  </div>
+                  <div
+                    class=""
+                    style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px"
+                  >
+                    <input id="controler2" type="checkbox" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Controler 3-->
+          <div
+            class="cardContainer align-items-center col-lg-6 col-md-12 col-sm-12"
+          >
+            <div id="bgControler3" class="cardSecContainer">
+              <div class="row">
+                <div
+                  class="imageContainer text-center col-lg-6 col-md-6 col-sm-12"
+                >
+                  <img
+                    id="controler3img"
+                    class="center"
+                    src=""
+                    style="width: 150px"
+                  />
+                </div>
+                <div
+                  class="col-lg-6 col-md-6 col-sm-12"
+                  style="padding-top: 20px;"
+                >
+                  <div
+                    class="text-center"
+                    style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px"
+                  >
+                    <h2 style="vertical-align: middle; color: white">
+                      Dining Room
+                    </h2>
+                  </div>
+                  <div
+                    class=""
+                    style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px"
+                  >
+                    <input id="controler3" type="checkbox" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Controler 4-->
+          <div
+            class="cardContainer align-items-center col-lg-6 col-md-12 col-sm-12"
+          >
+            <div id="bgControler4" class="cardSecContainer">
+              <div class="row">
+                <div
+                  class="imageContainer text-center col-lg-6 col-md-6 col-sm-12"
+                >
+                  <img
+                    id="controler4img"
+                    class="center"
+                    src=""
+                    style="width: 150px"
+                  />
+                </div>
+                <div
+                  class="col-lg-6 col-md-6 col-sm-12"
+                  style="padding-top: 20px;"
+                >
+                  <div
+                    class="text-center"
+                    style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px"
+                  >
+                    <h2 style="vertical-align: middle; color: white">
+                      Living Room
+                    </h2>
+                  </div>
+                  <div
+                    class=""
+                    style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px"
+                  >
+                    <input id="controler4" type="checkbox" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Controler 5-->
+          <div
+            class="cardContainer align-items-center col-lg-6 col-md-12 col-sm-12"
+          >
+            <div id="bgControler5" class="cardSecContainer">
+              <div class="row">
+                <div
+                  class="imageContainer text-center col-lg-6 col-md-6 col-sm-12"
+                >
+                  <img
+                    id="controler5img"
+                    class="center"
+                    src=""
+                    style="width: 150px"
+                  />
+                </div>
+                <div
+                  class="col-lg-6 col-md-6 col-sm-12"
+                  style="padding-top: 20px;"
+                >
+                  <div
+                    class="text-center"
+                    style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px"
+                  >
+                    <h2 style="vertical-align: middle; color: white">
+                      Swimming Pool
+                    </h2>
+                  </div>
+                  <div
+                    class=""
+                    style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px"
+                  >
+                    <input id="controler5" type="checkbox" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Controler 6-->
+          <div
+            class="cardContainer align-items-center col-lg-6 col-md-12 col-sm-12"
+          >
+            <div id="bgControler6" class="cardSecContainer">
+              <div class="row">
+                <div
+                  class="imageContainer text-center col-lg-6 col-md-6 col-sm-12"
+                >
+                  <img
+                    id="controler6img"
+                    class="center"
+                    src=""
+                    style="width: 150px"
+                  />
+                </div>
+                <div
+                  class="col-lg-6 col-md-6 col-sm-12"
+                  style="padding-top: 20px;"
+                >
+                  <div
+                    class="text-center"
+                    style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px"
+                  >
+                    <h2 style="vertical-align: middle; color: white">
+                      Terrace
+                    </h2>
+                  </div>
+                  <div
+                    class=""
+                    style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px"
+                  >
+                    <input id="controler6" type="checkbox" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Controler 7-->
+          <div
+            class="cardContainer align-items-center col-lg-6 col-md-12 col-sm-12"
+          >
+            <div id="bgControler7" class="cardSecContainer">
+              <div class="row">
+                <div
+                  class="imageContainer text-center col-lg-6 col-md-6 col-sm-12"
+                >
+                  <img
+                    id="controler7img"
+                    class="center"
+                    src=""
+                    style="width: 150px"
+                  />
+                </div>
+                <div
+                  class="col-lg-6 col-md-6 col-sm-12"
+                  style="padding-top: 20px;"
+                >
+                  <div
+                    class="text-center"
+                    style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px"
+                  >
+                    <h2 style="vertical-align: middle; color: white">
+                      Master bedroom
+                    </h2>
+                  </div>
+                  <div
+                    class=""
+                    style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px"
+                  >
+                    <input id="controler7" type="checkbox" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Controler 8-->
+          <div
+            class="cardContainer align-items-center col-lg-6 col-md-12 col-sm-12"
+          >
+            <div id="bgControler8" class="cardSecContainer">
+              <div class="row">
+                <div
+                  class="imageContainer text-center col-lg-6 col-md-6 col-sm-12"
+                >
+                  <img
+                    id="controler8img"
+                    class="center"
+                    src=""
+                    style="width: 150px"
+                  />
+                </div>
+                <div
+                  class="col-lg-6 col-md-6 col-sm-12"
+                  style="padding-top: 20px;"
+                >
+                  <div
+                    class="text-center"
+                    style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px"
+                  >
+                    <h2 style="vertical-align: middle; color: white">
+                      Rooftop
+                    </h2>
+                  </div>
+                  <div
+                    class=""
+                    style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px"
+                  >
+                    <input id="controler8" type="checkbox" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="page2">
+      <div class="alert alert-dark text-center" style="margin-top: 200px; margin-bottom: 200px;">
+        <h1>
+          WELCOME
+        </h1>
+      </div>
+      <div
+        style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px"
+      >
+        <button id="btnGiveCommand" onclick="loadImage()" class="btn btn-dark">
+          Continue
+        </button>
+      </div>
+      <br />
+    </div>
+  </body>
+
+  <script>
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCH13dve-b_cyX5uRADNhh3DXq1ChEatpg",
+    authDomain: "iot-project-b1549.firebaseapp.com",
+    databaseURL: "https://iot-project-b1549-default-rtdb.firebaseio.com",
+    projectId: "iot-project-b1549",
+    storageBucket: "iot-project-b1549.appspot.com",
+    messagingSenderId: "716226371850",
+    appId: "1:716226371850:web:558aa41ad9f3c498155af3",
+    measurementId: "G-T21STGCFFK"
+  };
+  firebase.initializeApp(firebaseConfig);
+  </script>
+  
+  <script type="text/javascript" src="js\jsz.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"
+  ></script>
+</html>
